@@ -34,3 +34,19 @@ contains a class for the actor, a class for the critic network and a class for a
 
 ---Normalize---
 realizes functions for the min-max normailzation and renormalization for the data used for neural networks
+
+
+HOW TO:
+
+---Integrate a new model---
+To integrate a new model in the structure, the Linear_Env.py file has to be changed.
+__init__: Here, the matrices and dimensions are defined.
+step: Here, the system equations are described and executed.
+All other functions in the Linear_Env.py file have to be adapted to possible changes of the new model parameters.
+
+In the Pre_trainig, the constraints of the states have to be adapted to the new model.
+
+In the Training_RL phase, again the constraints have to be adapted in the Main file and in the DDPG file.
+
+
+
